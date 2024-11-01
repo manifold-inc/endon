@@ -129,6 +129,7 @@ func main() {
 			cc.Err.Printf("Error writing point to InfluxDB: %v", err)
 			return c.JSON(http.StatusInternalServerError, "Error writing point to InfluxDB")
 		}
+		cc.Info.Printf("Success: Error logged")
 
 		return cc.JSON(http.StatusOK, "Error logged")
 	})

@@ -43,10 +43,10 @@ type ErrorReport struct {
 }
 
 func main() {
-	TOKEN := safeEnv("DOCKER_INFLUXDB_TOKEN")
+	TOKEN := safeEnv("DOCKER_INFLUXDB_INIT_ADMIN_TOKEN")
 	HOST := safeEnv("DOCKER_INFLUXDB_HOST")
-	ORG := safeEnv("DOCKER_INFLUXDB_ORGANIZATION")
-	BUCKET := safeEnv("DOCKER_INFLUXDB_BUCKET")
+	ORG := safeEnv("DOCKER_INFLUXDB_INIT_ORG")
+	BUCKET := safeEnv("DOCKER_INFLUXDB_INIT_BUCKET")
 
 	e := echo.New()
 	e.Use(func(next echo.HandlerFunc) echo.HandlerFunc {

@@ -19,6 +19,9 @@ services:
       timeout: 3s
       retries: 5
       start_period: 5s
+    networks:
+      - traefik
+      - default
 
   endon-ingestor:
     build:
@@ -35,6 +38,7 @@ services:
         condition: service_healthy
     networks:
       - traefik
+      - default
     env_file:
       - .env
       

@@ -17,7 +17,7 @@
     exposedByDefault = false
 
 [certificatesResolvers.letsencrypt.acme]
-  email = "YOUR EMAIL"
+  email = "operations@manifold.inc"
   storage= "/certificates/acme.json"
   [certificatesResolvers.letsencrypt.acme.httpChallenge]
     entryPoint = "web"
